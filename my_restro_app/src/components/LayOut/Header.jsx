@@ -1,3 +1,5 @@
+import fullFood from "../../assets/fullFood.jpg";
+
 
 const Header = () => {
     return <>
@@ -6,7 +8,7 @@ const Header = () => {
             <button> Cart </button>
         </header>
         <div className="main-image">
-            <img src="" alt="" />
+            <img src={fullFood} alt="" />
         </div>
     </>
 }
