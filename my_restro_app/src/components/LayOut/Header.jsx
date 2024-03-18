@@ -1,13 +1,14 @@
+import classes from "./Header.module.css"
 import fullFood from "../../assets/fullFood.jpg";
 
 
 const Header = () => {
     return <>
-        <header className="header">
+        <header className={classes.header}>
             <h1> Delicious Meals </h1>
             <button> Cart </button>
         </header>
-        <div className="main-image">
+        <div className={classes['main-image']}>
             <img src={fullFood} alt="" />
         </div>
     </>
