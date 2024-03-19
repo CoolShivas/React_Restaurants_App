@@ -1,4 +1,4 @@
-import Summary from "./components/Summary";
+import Meals from "./components/Meals/Meals";
 import Header from "./components/LayOut/Header";
 
 
@@ -6,7 +6,9 @@ import Header from "./components/LayOut/Header";
 function App() {
   return <>
     <Header></Header>
-    <Summary></Summary>
+    <main>
+      <Meals></Meals>
+    </main>
   </>
 }
 
