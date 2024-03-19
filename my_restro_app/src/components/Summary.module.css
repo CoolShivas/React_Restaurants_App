@@ -1,0 +1,12 @@
+.header_two {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+.header_three {
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+}
