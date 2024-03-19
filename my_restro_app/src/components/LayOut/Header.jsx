@@ -10,7 +10,7 @@ const Header = () => {
             <HeaderCartBtn></HeaderCartBtn>
         </header>
         <div className={classes['main-image']}>
-            <img src={fullFood} alt="" />
+            <img src={fullFood} alt="Image not found" />
         </div>
     </>
 }
