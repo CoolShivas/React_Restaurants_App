@@ -1,0 +1,21 @@
+.available_meals {
+    max-width: 60rem;
+    width: 90%;
+    margin: 2rem auto;
+    animation: available_meals-appear 1s ease-out forwards;
+}
+
+
+.available_meals ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+@keyframes available_meals {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+}
