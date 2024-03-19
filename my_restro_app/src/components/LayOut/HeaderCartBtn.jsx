@@ -1,12 +1,13 @@
+import classes from "./HeaderCartBtn.module.css";
 import CartIcon from "../Cart/CartIcon";
 
 
 const HeaderCartBtn = () => {
-    return <button className="button">
+    return <button className={classes.button}>
         {/* Cart */}
-        <span className="icon"> <CartIcon></CartIcon> </span>
+        <span className={classes.icon}> <CartIcon></CartIcon> </span>
         <span> Your Cart </span>
-        <span className="badge"> 3 </span>
+        <span className={classes.badge}> 3 </span>
     </button>
 }
 
