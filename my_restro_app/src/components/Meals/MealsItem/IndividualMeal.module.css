@@ -1,0 +1,22 @@
+.individual_items {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+    margin: 1rem;
+}
+
+.individual_items h3 {
+    margin: 0 0 0.25 0;
+}
+
+.description {
+    color: brown;
+    font-style: italic;
+}
+
+.price {
+    color: blue;
+    margin-top: 0.25rem;
+}
