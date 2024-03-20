@@ -1,0 +1,57 @@
+.modal {
+    position: fixed;
+    top: 20vh;
+    left: 3%;
+    right: 3%;
+    width: 90%;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.header {
+    font-weight: bold;
+
+}
+
+.content {
+    /* background-color: orange; */
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions {
+    float: right;
+    padding-top: 1rem;
+}
+
+.actions button {
+    background-color: brown;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 0.3rem;
+    border-radius: 10px;
+}
+
+
+.backdrop {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+
+
+/* 
+@media (min-width : 760px) {
+    .modal {
+        left: calc(50% - 20rem);
+        width: 40rem;
+    }
+} */
