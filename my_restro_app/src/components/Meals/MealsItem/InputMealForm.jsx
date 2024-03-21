@@ -4,7 +4,7 @@ import classes from "./InputMealForm.module.css";
 const InputMealForm = () => {
     return <form className={classes.form}>
         <Input labelABC="Amount" inputABC={{
-            Id: "amount",
+            id: "amount",
             type: "number",
             min: '1',
             max: "5",

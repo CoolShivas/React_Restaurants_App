@@ -35,6 +35,11 @@
     border-radius: 10px;
 }
 
+button:hover,
+button:active {
+    background-color: orange;
+}
+
 
 .backdrop {
     position: fixed;

@@ -1,0 +1,21 @@
+.cart-items {
+    list-style: none;
+    font-weight: bold;
+    text-align: left;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reactions {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.5rem;
+}
+
+.btnSecond {
+    background-color: brown;
+    color: white;
+}

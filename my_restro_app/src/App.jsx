@@ -1,3 +1,4 @@
+import Bucket from "./components/Cart/Bucket";
 import { useState } from "react";
 import ErrorModal from "./components/Cart/ErrorModal";
 import Meals from "./components/Meals/Meals";
@@ -19,7 +20,9 @@ function App() {
 
 
   return <>
-    {cartIsShown && <ErrorModal hideCartHandlerABC={hideCartHandler}></ErrorModal>}
+    {cartIsShown && <Bucket hideCartHandlerABC={hideCartHandler} ></Bucket>}
+
+    {/* {cartIsShown && <ErrorModal hideCartHandlerABC={hideCartHandler}></ErrorModal>} */}
 
     <Header
       showCartHandlerABC={showCartHandler}
@@ -32,4 +35,4 @@ function App() {
 }
 
 
-export default App;
+export default App; 
