@@ -1,7 +1,8 @@
 import classes from "./ErrorModal.module.css";
 import Card from "../UI/Card";
 
-const ErrorModal = () => {
+const ErrorModal = ({ hideCartHandlerABC }) => {
+
     return <div className={classes.backdrop}>
         <Card className={classes.modal}>
             <header className={classes.header}>
@@ -12,11 +13,11 @@ const ErrorModal = () => {
                 <span> Rs. 35.65 /- </span>
             </main>
             <footer className={classes.actions}>
-                <button> Close </button>
+                <button onClick={hideCartHandlerABC}> Close </button>
                 <button> Order </button>
             </footer>
         </Card>
-    </div>
+    </div >
 }
 
 

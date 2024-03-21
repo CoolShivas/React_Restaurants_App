@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ErrorModal from "./components/Cart/ErrorModal";
 import Meals from "./components/Meals/Meals";
 import Header from "./components/LayOut/Header";
@@ -5,9 +6,25 @@ import Header from "./components/LayOut/Header";
 
 
 function App() {
+
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsShown(true);
+  }
+
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+  }
+
+
   return <>
-    <ErrorModal></ErrorModal>
-    <Header></Header>
+    {cartIsShown && <ErrorModal hideCartHandlerABC={hideCartHandler}></ErrorModal>}
+
+    <Header
+      showCartHandlerABC={showCartHandler}
+    ></Header>
+
     <main>
       <Meals></Meals>
     </main>
