@@ -1,25 +1,31 @@
+import { useState } from "react";
 import CartContext from "./CartContext";
 
 
 const CartProvider = (props) => {
 
-    const addItemToBucketHandler = (item) => {
+    const [addCartItem, setAddCartItem] = useState([])
 
+    const addItemToBucketHandler = (newItem) => {
+        setAddCartItem([
+            ...addCartItem,
+            newItem,
+        ])
     }
 
     const removeItemToBucketHandler = (id) => {
 
     }
 
-    const cartContext = {
-        items: [],
+    const cartContextApi = {
+        items: addCartItem,
         totalAmount: 0,
         addItem: addItemToBucketHandler,
         removeItem: removeItemToBucketHandler,
-        message: 'Click here',
+        // message: 'Click here',
     };
 
-    return <CartContext.Provider value={cartContext}>
+    return <CartContext.Provider value={cartContextApi}>
         {props.children}
     </CartContext.Provider>
 }

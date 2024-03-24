@@ -1,7 +1,8 @@
 .cart-items {
-    list-style: none;
+    list-style-type: none;
     font-weight: bold;
-    text-align: left;
+    display: inline;
+    padding: 0.5rem;
 }
 
 .total {
@@ -18,4 +19,11 @@
 .btnSecond {
     background-color: brown;
     color: white;
+}
+
+.liTag {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid red;
+    padding: 0.5rem;
 }

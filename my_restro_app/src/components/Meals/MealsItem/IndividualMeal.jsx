@@ -4,14 +4,17 @@ import classes from "./IndividualMeal.module.css";
 
 const IndividualMeal = (props) => {
 
-    const amount = `Rs ${props.priceABC.toFixed(2)} /-`;
+    const rupay = `Rs ${props.priceABC.toFixed(2)} /-`;
 
     return <li className={classes.individual_items}>
-        <h3> {props.nameABC} </h3>
-        <div className={classes.description}> {props.descriptionABC} </div>
-        <div className={classes.price}> {amount} </div>
         <div>
-            <InputMealForm></InputMealForm>
+            <h3> {props.nameABC} </h3>
+            <div className={classes.description}> {props.descriptionABC} </div>
+            <div className={classes.price}> {rupay} </div>
+        </div>
+        <div>
+            {/* {console.log(props)} */}
+            <InputMealForm id={props.id} product={props}></InputMealForm>
         </div>
     </li>
 }
