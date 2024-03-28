@@ -16,20 +16,22 @@ const InputMealForm = (props) => {
         // console.log('after addItemToCart', exclusiveContext);
         const quantity = document.getElementById("amt_" + props.id).value;
         exclusiveContext.addItem({ ...props.product, quantity: quantity });
-
+        console.log(quantity)
     }
 
     return <form className={classes.form} onSubmit={submitOnHandler}>
         {/* {console.log('inside render', exclusiveContext)} */}
 
-        <Input labelABC="Amount" inputABC={{
-            id: "amt_" + props.id,
-            type: "number",
-            min: '1',
-            max: "5",
-            step: "1",
-            defaultValue: '1',
-        }}
+        <Input
+            labelABC="Quantity"
+            inputABC={{
+                id: "amt_" + props.id,
+                type: "number",
+                min: '1',
+                max: "5",
+                step: "1",
+                defaultValue: '1',
+            }}
         ></Input>
         <button type="submit"> + Add </button>
     </form>

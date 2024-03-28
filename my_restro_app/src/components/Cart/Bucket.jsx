@@ -1,4 +1,6 @@
-import { useContext } from "react";
+import { BsBagDash } from "react-icons/bs";
+import { BsBagPlus } from "react-icons/bs";
+import { useContext, useState } from "react";
 import CartContext from "../../store/CartContext";
 import classes from "./Bucket.module.css";
 import Modal from "../UI/Modal";
@@ -6,9 +8,11 @@ import Modal from "../UI/Modal";
 const Bucket = (props) => {
 
     const contextApi = useContext(CartContext);
-    console.log(contextApi.items.nameABC)
+    console.log(contextApi.items)
+
 
     const cartItems = <ul className={classes['cart-items']}>
+
         {/* {[
             {
                 id: 'c1',
@@ -25,15 +29,20 @@ const Bucket = (props) => {
         {contextApi.items.map((item) => {
             return <li key={item.id}
                 className={classes.liTag}
-            >Name : {item.nameABC} Price : Rs.{item.priceABC} /- Qty : {item.quantity}</li>
+            >Name : {item.nameABC} Price : Rs.{item.priceABC} /- Qty : {item.quantity}
+                <button className={classes.common} onClick={() => { console.log('plus clicked') }}> <BsBagPlus /> </button>
+                <button className={classes.common} onClick={() => { console.log('minus clicked') }}> <BsBagDash /> </button>
+            </li>
         })}
 
 
     </ul>
 
     const calculateTotalAmount = () => {
-        return contextApi.items.reduce((total, product) => total + parseFloat(product.priceABC), 0);
+        return contextApi.items.reduce((total, product) => total + parseFloat(product.priceABC * product.quantity), 0);
     }
+
+    // const accumulatedPrice = `${contextApi.totalAmount.toFixed(2)}`
 
 
     return <Modal hideCartHandlerABC={props.hideCartHandlerABC}>
@@ -43,6 +52,7 @@ const Bucket = (props) => {
             <span> Total Amount </span>
             {/* <span> Rs. 88.10 /- </span> */}
             <span> Rs. {calculateTotalAmount()} /- </span>
+            {/* <span> {accumulatedPrice} </span> */}
         </div>
         <div className={classes.reactions}>
             <button

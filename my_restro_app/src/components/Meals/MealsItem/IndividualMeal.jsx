@@ -13,8 +13,8 @@ const IndividualMeal = (props) => {
             <div className={classes.price}> {rupay} </div>
         </div>
         <div>
-            {/* {console.log(props)} */}
-            <InputMealForm id={props.id} product={props}></InputMealForm>
+            {console.log(props)}
+            <InputMealForm id={props.idABC} product={props}></InputMealForm>
         </div>
     </li>
 }
