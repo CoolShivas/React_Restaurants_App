@@ -8,7 +8,18 @@ import Modal from "../UI/Modal";
 const Bucket = (props) => {
 
     const contextApi = useContext(CartContext);
-    console.log(contextApi.items)
+    // console.log(contextApi.items)
+
+    const incrementQtyHandler = (id) => {
+        contextApi.changeQuantity(id, 1)
+    }
+
+    const decrementQtyHandler = (id) => {
+        contextApi.changeQuantity(id, -1)
+    }
+
+
+
 
 
     const cartItems = <ul className={classes['cart-items']}>
@@ -30,8 +41,8 @@ const Bucket = (props) => {
             return <li key={item.id}
                 className={classes.liTag}
             >Name : {item.nameABC} Price : Rs.{item.priceABC} /- Qty : {item.quantity}
-                <button className={classes.common} onClick={() => { console.log('plus clicked') }}> <BsBagPlus /> </button>
-                <button className={classes.common} onClick={() => { console.log('minus clicked') }}> <BsBagDash /> </button>
+                <button className={classes.common} onClick={() => incrementQtyHandler(item.id)}> <BsBagPlus /> </button>
+                <button className={classes.common} onClick={() => decrementQtyHandler(item.id)}> <BsBagDash /> </button>
             </li>
         })}
 
