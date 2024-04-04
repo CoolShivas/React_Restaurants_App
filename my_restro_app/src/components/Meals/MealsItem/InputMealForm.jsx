@@ -16,7 +16,7 @@ const InputMealForm = (props) => {
         // console.log('after addItemToCart', exclusiveContext);
         const quantity = document.getElementById("amt_" + props.id).value;
         exclusiveContext.addItem({ ...props.product, quantity: quantity });
-        console.log(quantity)
+        console.log(props.product)
     }
 
     return <form className={classes.form} onSubmit={submitOnHandler}>

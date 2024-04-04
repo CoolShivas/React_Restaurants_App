@@ -12,15 +12,12 @@ const Bucket = (props) => {
 
     const incrementQtyHandler = (id) => {
         contextApi.changeQuantity(id, 1)
+        console.log(id, "bucket id")
     }
 
     const decrementQtyHandler = (id) => {
         contextApi.changeQuantity(id, -1)
     }
-
-
-
-
 
     const cartItems = <ul className={classes['cart-items']}>
 
@@ -41,8 +38,8 @@ const Bucket = (props) => {
             return <li key={item.id}
                 className={classes.liTag}
             >Name : {item.nameABC} Price : Rs.{item.priceABC} /- Qty : {item.quantity}
-                <button className={classes.common} onClick={() => incrementQtyHandler(item.id)}> <BsBagPlus /> </button>
-                <button className={classes.common} onClick={() => decrementQtyHandler(item.id)}> <BsBagDash /> </button>
+                <button className={classes.common} onClick={() => incrementQtyHandler(item.idABC)}> <BsBagPlus /> </button>
+                <button className={classes.common} onClick={() => decrementQtyHandler(item.idABC)}> <BsBagDash /> </button>
             </li>
         })}
 
